@@ -1,0 +1,52 @@
+* {
+  text-align: center;
+  background-color: #fbd61f;
+  font-family: "Ribeye Marrow", cursive;
+}
+
+.main-header {
+  margin-top: 2%;
+  font-size: 85px;
+  color: #e30821;
+  border-bottom: solid #0526e3;
+  border-width: 7px;
+}
+
+.main-logo {
+  width: 250px;
+}
+
+.intro-div .intro-para {
+  text-align: center;
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  background: rgb(128, 17, 26, 0.25);
+  color: black;
+  border-radius: 10px;
+  padding: 20px 20px;
+  font-size: 45px;
+  font-weight: 600;
+}
+.intro-btns {
+  display: inline-block;
+  color: black;
+  font-weight: 800;
+  border-radius: 8px;
+  justify-content: center;
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-bottom: 5%;
+  max-width: 100%;
+  max-height: 100%;
+  background: rgb(128, 17, 26, 0.25);
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  border: 2px solid #e72b21;
+}
+.intro-btns:hover {
+  background-color: #e72b21;
+  color: black;
+}
