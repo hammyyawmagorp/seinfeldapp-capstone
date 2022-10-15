@@ -41,7 +41,7 @@
   max-height: 100%;
   background: rgb(128, 17, 26, 0.25);
   padding: 14px 28px;
-  font-size: 16px;
+  font-size: 35px;
   cursor: pointer;
   text-align: center;
   border: 2px solid #e72b21;
@@ -49,4 +49,8 @@
 .intro-btns:hover {
   background-color: #e72b21;
   color: black;
+}
+
+.treats-header {
+  font-size: 65px;
 }

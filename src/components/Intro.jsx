@@ -10,8 +10,8 @@ const Intro = () => {
           Babka, some Muffin Tops, specialty soups, yada yada yada...? Then
           you’ve come to the right place!<br></br>
           <br></br>
-          Search for your favorite Seinfedian treats. Learn more about them. See
-          where you can get some of the treats in New York City.<br></br>
+          Search for your favorite Seinfeldian treats. Learn more about them.
+          See where you can get some of the treats in New York City.<br></br>
           <br></br>
           You can also send us reccomendations/ideas for more items!
         </p>
