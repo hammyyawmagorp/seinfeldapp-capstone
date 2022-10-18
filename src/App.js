@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./components/Header";
 import Intro from "./components/Intro";
 import Treats from "./components/Treats";
-import "./App.css";
+import "./index.css";
 
 function App() {
   return (
