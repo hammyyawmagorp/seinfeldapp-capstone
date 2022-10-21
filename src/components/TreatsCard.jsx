@@ -2,10 +2,6 @@ import React from "react";
 import Treats from "./Treats";
 
 const TreatsCard = ({ treat }) => {
-  const handleLocationBtn = () => {
-    console.log("Find me!");
-  };
-
   return (
     <div className="treat-card">
       <h2 className="card-header">{treat.food_name}</h2>
