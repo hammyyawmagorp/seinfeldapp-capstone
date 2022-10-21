@@ -15,9 +15,6 @@ const Intro = () => {
           <br></br>
           You can also send us reccomendations/ideas for more items!
         </p>
-        <button className="intro-btns">Treats</button>
-        <button className="intro-btns">Locations</button>
-        <button className="intro-btns">Recommendations</button>
       </div>
     </div>
   );

@@ -1,7 +1,9 @@
 * {
   text-align: center;
-  background-color: #fbd61f;
   font-family: "Ribeye Marrow", cursive;
+}
+body {
+  background-color: #fbd61f;
 }
 
 .main-header {
@@ -18,7 +20,7 @@
 
 .intro-div .intro-para {
   text-align: center;
-  margin-top: 5%;
+  margin-top: 1.5%;
   margin-left: 10%;
   margin-right: 10%;
   background: rgb(128, 17, 26, 0.25);
@@ -52,5 +54,39 @@
 }
 
 .treats-header {
+  margin-top: 10%;
+  margin-bottom: 6.5%;
   font-size: 65px;
+}
+.treat-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+.treat-card {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  position: relative;
+  background-color: #80111a65;
+  border: solid #80111a 5px;
+  padding: 0;
+  height: auto;
+  float: left;
+  letter-spacing: 1px;
+  font-size: 30px;
+}
+.more-info-cardBtn {
+  font-size: 15px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.card-image {
+  width: 50%;
+  height: 180px;
+  object-fit: cover;
+  border: solid #0526e3 2px;
+  border-radius: 50px;
 }
