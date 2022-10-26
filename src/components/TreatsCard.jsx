@@ -9,7 +9,7 @@ const TreatsCard = ({ treat }) => {
         <img className="card-image" src={treat.image_url} alt="food image" />
       </p>
       <p>{treat.episode}</p>
-      <p>{treat.episode_name}</p>
+      <p>"{treat.episode_name}"</p>
       <p>
         Characters: <br></br>
         {treat.characters}

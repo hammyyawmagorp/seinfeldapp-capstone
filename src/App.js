@@ -1,8 +1,9 @@
-import { React, useRef } from "react";
+import { React, useRef, useEffect, useState } from "react";
 import Header from "./components/Header";
 import Intro from "./components/Intro";
 import Treats from "./components/Treats";
-import Location from "./components/Locations";
+import Locations from "./components/Locations";
+import BackToTopBtn from "./components/BackToTopBtn";
 import "./index.css";
 
 function App() {
@@ -28,15 +29,30 @@ function App() {
           >
             Treats
           </button>
-          <button className="intro-btns">Locations</button>
-          <button className="intro-btns">Recommendations</button>
+          <button
+            className="intro-btns"
+            onClick={() => scrollToSection(locationsBtn)}
+          >
+            Locations
+          </button>
+          <button
+            className="intro-btns"
+            // onClick={() => scrollToSection(recommBtn)}
+          >
+            Recommendations
+          </button>
         </div>
       }
+
       <Intro />
       <div ref={treatsBtn}>
         <Treats />
-        <Location />
       </div>
+      <div ref={locationsBtn}>
+        <Locations />
+      </div>
+      <div className="footer-div"></div>
+      <BackToTopBtn />
     </div>
   );
 }
