@@ -18,11 +18,33 @@ const BackToTopBtn = () => {
       behavior: "smooth",
     });
   };
+
+  const [isHovering, setIsHovering] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovering(false);
+  };
   return (
     <div className="back-to-top-btn">
       {backToTopButton && (
-        <button onClick={scrollUp}>
-          Back to Top<br></br>^
+        <button
+          style={{
+            borderRadius: "15px",
+            backgroundColor: isHovering ? "#e72b21" : "rgb(128, 17, 26, 0.5)",
+            color: isHovering ? "#dadae0" : "black",
+            position: "fixed",
+            cursor: "pointer",
+          }}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          onClick={scrollUp}
+        >
+          ⬆<br></br>Back to <br></br>Top of Page
+          <br></br>
         </button>
       )}
     </div>

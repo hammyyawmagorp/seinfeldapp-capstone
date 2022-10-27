@@ -1,7 +1,10 @@
 import React from "react";
 import Treats from "./Treats";
+import { useState } from "react";
 
 const TreatsCard = ({ treat }) => {
+  // const [flip, setFlip] = useState(false);
+
   return (
     <div className="treat-card">
       <h2 className="card-header">{treat.food_name}</h2>

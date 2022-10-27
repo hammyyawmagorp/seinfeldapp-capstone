@@ -39,7 +39,7 @@ function App() {
             className="intro-btns"
             // onClick={() => scrollToSection(recommBtn)}
           >
-            Recommendations
+            Tips?
           </button>
         </div>
       }

@@ -30,8 +30,12 @@ body {
   padding: 20px 20px;
   font-size: 42px;
   font-weight: 600;
+  box-shadow: rgba(231, 43, 33, 0.6) -10px 10px,
+    rgba(231, 43, 33, 0.2) -25px 25px, rgba(5, 38, 227, 0.3) -10px 10px,
+    rgba(231, 43, 33, 0.05) -35px 35px, rgba(5, 38, 227, 0.1) -20px 20px;
+  border: solid rgba(231, 43, 33, 0.6) 2px;
 }
-.intro-btns {
+/* .intro-btns {
   display: inline-block;
   color: black;
   font-weight: 800;
@@ -48,12 +52,59 @@ body {
   cursor: pointer;
   text-align: center;
   border: 2px solid #e72b21;
-}
-.intro-btns:hover {
+} */
+/* .intro-btns:hover {
   background-color: #e72b21;
   color: black;
+} */
+
+.intro-btns {
+  border-radius: 4px;
+  background-color: rgb(128, 17, 26, 0.25);
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 32px;
+  padding: 16px;
+  width: 220px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 36px;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
+  font-weight: 800;
+  border-radius: 15px;
+  border: 2px solid rgba(231, 43, 33, 0.6);
 }
 
+.intro-btns {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.intro-btns:after {
+  content: "↓";
+  position: absolute;
+  opacity: 0;
+  top: 14px;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.intro-btns:hover {
+  padding-right: 24px;
+  padding-left: 8px;
+  background-color: #e72b21;
+  box-shadow: rgba(231, 43, 33, 0.6) 10px 10px, rgba(5, 38, 227, 0.3) 10px 10px,
+    rgba(231, 43, 33, 0.2) 25px 25px, rgba(5, 38, 227, 0.1) 20px 20px,
+    rgba(231, 43, 33, 0.05) 35px 35px;
+}
+
+.intro-btns:hover:after {
+  opacity: 1;
+  right: 10px;
+}
 .treats-header {
   margin-top: 10%;
   margin-bottom: 6.5%;
@@ -72,9 +123,8 @@ body {
   border-radius: 6px;
   margin-left: 10px;
   position: relative;
-  /* background-color: #80111a65; */
   background-color: rgba(128, 17, 26, 0.2);
-  border: solid #80111a88 2px;
+  border: solid rgba(231, 43, 33, 0.6) 2px;
   padding: 0;
   height: auto;
   float: left;
@@ -95,6 +145,7 @@ body {
   object-fit: cover;
   border: solid #0526e3 2px;
   border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
 }
 
 .footer-div {
@@ -117,6 +168,5 @@ body {
   height: 100px;
   width: 100px;
   font-size: 100px;
-  border-radius: 100px;
-  opacity: 80%;
+  opacity: 90%;
 }
