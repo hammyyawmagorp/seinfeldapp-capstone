@@ -2,7 +2,7 @@ import { React, useRef, useEffect, useState } from "react";
 import Header from "./components/Header";
 import Intro from "./components/Intro";
 import Treats from "./components/Treats";
-import Locations from "./components/Locations";
+import Trivia from "./components/Trivia";
 import BackToTopBtn from "./components/BackToTopBtn";
 import "./index.css";
 
@@ -33,7 +33,7 @@ function App() {
             className="intro-btns"
             onClick={() => scrollToSection(locationsBtn)}
           >
-            Locations
+            Trivia
           </button>
           <button
             className="intro-btns"
@@ -49,7 +49,7 @@ function App() {
         <Treats />
       </div>
       <div ref={locationsBtn}>
-        <Locations />
+        <Trivia />
       </div>
       <div className="footer-div"></div>
       <BackToTopBtn />

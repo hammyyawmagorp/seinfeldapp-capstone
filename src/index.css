@@ -5,6 +5,10 @@
 body {
   background-color: #fbd61f;
   margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-header {
@@ -35,28 +39,6 @@ body {
     rgba(231, 43, 33, 0.05) -35px 35px, rgba(5, 38, 227, 0.1) -20px 20px;
   border: solid rgba(231, 43, 33, 0.6) 2px;
 }
-/* .intro-btns {
-  display: inline-block;
-  color: black;
-  font-weight: 800;
-  border-radius: 8px;
-  justify-content: center;
-  margin-left: 80px;
-  margin-right: 80px;
-  margin-bottom: 5%;
-  max-width: 100%;
-  max-height: 100%;
-  background: rgb(128, 17, 26, 0.25);
-  padding: 14px 28px;
-  font-size: 35px;
-  cursor: pointer;
-  text-align: center;
-  border: 2px solid #e72b21;
-} */
-/* .intro-btns:hover {
-  background-color: #e72b21;
-  color: black;
-} */
 
 .intro-btns {
   border-radius: 4px;
@@ -81,6 +63,10 @@ body {
   display: inline-block;
   position: relative;
   transition: 0.5s;
+  box-shadow: rgba(231, 43, 33, 0.6) -10px 10px,
+    rgba(231, 43, 33, 0.2) -25px 25px, rgba(5, 38, 227, 0.3) -10px 10px,
+    rgba(231, 43, 33, 0.05) -35px 35px, rgba(5, 38, 227, 0.1) -20px 20px;
+  border: solid rgba(231, 43, 33, 0.6) 2px;
 }
 
 .intro-btns:after {
@@ -143,16 +129,14 @@ body {
   width: 50%;
   height: 180px;
   object-fit: cover;
-  border: solid #0526e3 2px;
+  border: solid rgba(231, 43, 33, 0.6) 1px;
   border-radius: 50px;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
-}
 
-.footer-div {
-  background-color: #e30821;
-  width: 100%;
-  padding: 85px;
-  color: #e3082100;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 .locations-header {
@@ -170,3 +154,79 @@ body {
   font-size: 100px;
   opacity: 90%;
 }
+
+.trivia-header {
+  margin-top: 10%;
+  margin-bottom: 6.5%;
+  font-size: 65px;
+}
+.trivia-card {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.trivia-card-motion {
+  background-color: white;
+  padding: 3rem 5rem;
+  width: 90%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  margin-left: 10px;
+  position: relative;
+  background-color: rgba(128, 17, 26, 0.2);
+  border: solid rgba(231, 43, 33, 0.6) 2px;
+  padding: 0;
+  height: auto;
+  float: left;
+  letter-spacing: 0.5px;
+  font-size: 25px;
+  box-shadow: rgba(231, 43, 33, 0.6) 10px 10px, rgba(5, 38, 227, 0.3) 10px 10px,
+    rgba(231, 43, 33, 0.2) 25px 25px, rgba(5, 38, 227, 0.1) 20px 20px,
+    rgba(231, 43, 33, 0.05) 35px 35px;
+}
+
+.trivia-card-motion p {
+  padding-top: 1rem;
+  line-height: 150%;
+}
+
+.trivia-card-btn {
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.treat-card-btn {
+  border-radius: 4px;
+  background-color: rgb(128, 17, 26, 0.25);
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 15px;
+  padding: 16px;
+  width: 220px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 36px;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
+  font-weight: 800;
+  border-radius: 15px;
+  border: 2px solid rgba(231, 43, 33, 0.6);
+}
+.treat-card-btn:hover {
+  padding-right: 24px;
+  padding-left: 8px;
+  background-color: #e72b21;
+  box-shadow: rgba(231, 43, 33, 0.6) 10px 10px, rgba(5, 38, 227, 0.3) 10px 10px,
+    rgba(231, 43, 33, 0.2) 25px 25px, rgba(5, 38, 227, 0.1) 20px 20px,
+    rgba(231, 43, 33, 0.05) 35px 35px;
+}
+
+/* .footer-div {
+  background-color: #e30821;
+  width: 100%;
+  padding: 85px;
+  color: #e3082100;
+} */ ;
