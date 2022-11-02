@@ -12,12 +12,14 @@ const TreatsCard = ({ treat }) => {
       layout
       transition={{ layout: { duration: 1, type: "spring" } }}
     >
-      <h2 className="card-header">{treat.food_name}</h2>
+      <h2 className="card-header" style={{ color: "#451115" }}>
+        {treat.food_name}
+      </h2>
       <p>
         <img className="card-image" src={treat.image_url} alt="food image" />
       </p>
       <p>{treat.episode}</p>
-      <p>"{treat.episode_name}"</p>
+      <p style={{ color: "#80111A" }}>"{treat.episode_name}"</p>
       <p>
         Characters: <br></br>
         {treat.characters}
