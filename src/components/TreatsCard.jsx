@@ -32,11 +32,11 @@ const TreatsCard = ({ treat }) => {
       {isOpen && (
         <motion.div
           className="expand"
-          // transition={{ layout: { duration: 1, type: "spring" } }}
-          // layout
+          transition={{ layout: { duration: 0.5, type: "spring" } }}
         >
           {treat.location}
           <br></br> {treat.address}
+          <br></br>
         </motion.div>
       )}
     </motion.div>
