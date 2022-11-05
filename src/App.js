@@ -15,7 +15,7 @@ const containerStyle = {
   height: "80vh",
   margin: "auto",
   borderBox: "round, black",
-  borderRadius: "50px",
+  borderRadius: "20px",
 };
 
 const center = {
