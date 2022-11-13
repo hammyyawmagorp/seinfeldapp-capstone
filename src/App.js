@@ -7,25 +7,7 @@ import Trivia from "./components/Trivia";
 import Tips from "./components/Tips";
 import BackToTopBtn from "./components/BackToTopBtn";
 import { GoogleMap, useLoadScript } from "@react-google-maps/api";
-import { mapStyles } from "./components/mapStyles";
 import "./index.css";
-
-const containerStyle = {
-  width: "80vw",
-  height: "80vh",
-  margin: "auto",
-  borderBox: "round, black",
-  borderRadius: "20px",
-};
-
-const center = {
-  lat: 37.6804,
-  lng: -97.769,
-};
-
-const options = {
-  styles: mapStyles,
-};
 
 function App() {
   const treatsBtn = useRef(null);
@@ -90,12 +72,19 @@ function App() {
 
       <div className="footer-div"></div>
 
-      <GoogleMap
-        mapContainerStyle={containerStyle}
-        center={center}
-        zoom={4}
-        options={options}
-      ></GoogleMap>
+      <div>
+        <iframe
+          src="https://snazzymaps.com/embed/436432"
+          width="75%"
+          height="800px"
+          style={{
+            border: 0,
+            // margin: "auto",
+            borderBox: "round, black",
+            borderRadius: "20px",
+          }}
+        ></iframe>
+      </div>
 
       <div ref={triviaBtn}>
         <Trivia />
