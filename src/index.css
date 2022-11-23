@@ -57,8 +57,35 @@ body {
   border-radius: 15px;
   border: 2px solid rgba(231, 43, 33, 0.6);
 }
+.form-btn {
+  border-radius: 4px;
+  background-color: rgb(128, 17, 26, 0.25);
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 32px;
+  padding: 16px;
+  width: 220px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 36px;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
+  font-weight: 800;
+  border-radius: 15px;
+  border: 2px solid rgba(231, 43, 33, 0.6);
+}
 
 .intro-btns {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  box-shadow: rgba(231, 43, 33, 0.6) -10px 10px,
+    rgba(231, 43, 33, 0.2) -25px 25px, rgba(5, 38, 227, 0.3) -10px 10px,
+    rgba(231, 43, 33, 0.05) -35px 35px, rgba(5, 38, 227, 0.1) -20px 20px;
+  border: solid rgba(231, 43, 33, 0.6) 2px;
+}
+.form-btn {
   cursor: pointer;
   display: inline-block;
   position: relative;
@@ -77,8 +104,24 @@ body {
   right: -20px;
   transition: 0.5s;
 }
+.form-btn:after {
+  content: "→";
+  position: absolute;
+  opacity: 0;
+  top: 14px;
+  right: -20px;
+  transition: 0.5s;
+}
 
 .intro-btns:hover {
+  padding-right: 24px;
+  padding-left: 8px;
+  background-color: #e72b21;
+  box-shadow: rgba(231, 43, 33, 0.6) 10px 10px, rgba(5, 38, 227, 0.3) 10px 10px,
+    rgba(231, 43, 33, 0.2) 25px 25px, rgba(5, 38, 227, 0.1) 20px 20px,
+    rgba(231, 43, 33, 0.05) 35px 35px;
+}
+.form-btn:hover {
   padding-right: 24px;
   padding-left: 8px;
   background-color: #e72b21;
@@ -91,6 +134,11 @@ body {
   opacity: 1;
   right: 10px;
 }
+.form-btn:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+
 .treats-header {
   margin-top: 10%;
   margin-bottom: 6.5%;
@@ -146,6 +194,11 @@ body {
   font-size: 65px;
 }
 
+.tips-header {
+  margin-top: 10%;
+  margin-bottom: 2%;
+  font-size: 65px;
+}
 .back-to-top-btn {
   position: fixed;
   bottom: 100px;
