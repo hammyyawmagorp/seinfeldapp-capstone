@@ -31,8 +31,11 @@ app.post("/send", function (req, res) {
   let mailOptions = {
     // from: `${req.body.mailerState.name}`,
     to: process.env.EMAIL,
-    subject: `Message from : ${req.body / mailerState.email}`,
-    text: `Message: ${req.body.mailerState.message}`,
+    subject: `Message from : ${req.body.mailerState.txtemail}`,
+    text: `
+  My name is ${req.body.mailerState.name} and my favorite character is ${req.body.mailerState.favchar}.
+  ${req.body.mailerState.message} - 
+  You can email me at ${req.body.mailerState.txtemail}`,
   };
 
   transporter.sendMail(mailOptions, function (err, data) {
