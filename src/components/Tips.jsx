@@ -46,56 +46,63 @@ const Tips = () => {
   return (
     <div>
       <h1 className="tips-header">Tips & Comments?</h1>
-      <form onSubmit={submitEmail}>
+      <form className="form-box" onSubmit={submitEmail}>
         <div>
-          <p>
+          <p className="tips-para">
             Are there any other foods or locations you would like to see? Are
             you loving the site? Do you have and tips for us? Or maybe you just
-            want to tell us how much you love Seinfeld! Write to us using the
-            form below!{" "}
+            want to tell us how much you love Seinfeld! <br></br>
+            <br></br>Write to us using the form below:{" "}
           </p>
         </div>
         <h5>All Fields Are Required</h5>
-        <label>First Name: </label>
-        <input
-          className="form-input-fields"
-          placeholder="Name"
-          onChange={handleStateChange}
-          name="name"
-          value={mailerState.name}
-          required
-        />
-        <br></br>
-        <label>Email: </label>
-        <input
-          className="form-input-fields"
-          placeholder="Email"
-          onChange={handleStateChange}
-          type="email"
-          name="txtemail"
-          value={mailerState.txtemail}
-          required
-        />
-        <br></br>
-        <label>Favorite Character: </label>
-        <input
-          className="form-input-fields"
-          placeholder="Fav Character?"
-          onChange={handleStateChange}
-          name="favchar"
-          value={mailerState.favchar}
-          required
-        />
-        <br></br>
-        <label>First Name: </label>
-        <br></br>
-        <textarea
-          placeholder="Message"
-          onChange={handleStateChange}
-          name="message"
-          value={mailerState.message}
-          required
-        />
+        <p className="form-input-labels">
+          First Name:
+          <input
+            className="form-input-fields"
+            placeholder="Name"
+            onChange={handleStateChange}
+            name="name"
+            value={mailerState.name}
+            required
+          />
+        </p>
+        <p className="form-input-labels">
+          Email:
+          <input
+            className="form-input-fields"
+            placeholder="Email"
+            onChange={handleStateChange}
+            type="email"
+            name="txtemail"
+            value={mailerState.txtemail}
+            required
+          />
+        </p>
+
+        <p className="form-input-labels">
+          Favorite Character:
+          <input
+            className="form-input-fields"
+            placeholder="Fav Character?"
+            onChange={handleStateChange}
+            name="favchar"
+            value={mailerState.favchar}
+            required
+          />
+        </p>
+        <p className="form-input-message">
+          Message:<br></br>
+          <br></br>
+          <textarea
+            className="form-message-box"
+            placeholder="Message"
+            onChange={handleStateChange}
+            name="message"
+            value={mailerState.message}
+            required
+          />
+        </p>
         <br></br>
         <button className="form-btn">Send</button>
       </form>

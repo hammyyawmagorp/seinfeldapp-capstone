@@ -281,6 +281,79 @@ body {
 .expand {
   margin-bottom: 50px;
 }
+.tips-para {
+  margin: auto;
+  width: 1000px;
+  height: 100%;
+  padding: 25px;
+}
+.form-box {
+  background-color: #fbd61f;
+  border: #e30821 solid;
+  border-radius: 50px;
+  margin: auto;
+  width: 1000px;
+  height: 100%;
+  padding: 25px;
+  margin-bottom: 100px;
+  text-align: center;
+
+  background: rgb(128, 17, 26, 0.25);
+  color: black;
+  border-radius: 10px;
+  padding: 20px 20px;
+  font-size: 40px;
+  font-weight: 600;
+  box-shadow: rgba(231, 43, 33, 0.6) -10px 10px,
+    rgba(231, 43, 33, 0.2) -25px 25px, rgba(5, 38, 227, 0.3) -10px 10px,
+    rgba(231, 43, 33, 0.05) -35px 35px, rgba(5, 38, 227, 0.1) -20px 20px;
+  border: solid rgba(231, 43, 33, 0.6) 2px;
+}
+.form-input-labels {
+  text-align: left;
+  margin-bottom: 2px;
+  margin-top: 50px;
+  margin-left: 200px;
+  font-weight: 800;
+  font-size: 25px;
+}
+.form-input-fields {
+  margin: 10px;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  /* text-align: center;
+  align-items: center; */
+}
+.form-input-fields:hover {
+  border: 2px solid rgba(231, 43, 33, 0.6);
+  background-color: rgba(231, 43, 33, 0.1);
+  color: #0526e3;
+  font-weight: 900px;
+}
+.form-input-message {
+  text-align: center;
+  margin-bottom: 2px;
+  margin-top: 50px;
+  margin-left: 200px;
+  font-weight: 800;
+  font-size: 25px;
+}
+.form-message-box {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  margin: auto;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+  cursor: pointer;
+}
+
 /* .footer-div {
   background-color: #e30821;
   width: 100%;
