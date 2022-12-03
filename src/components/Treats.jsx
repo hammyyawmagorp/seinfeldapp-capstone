@@ -7,6 +7,7 @@ import TreatsCard from "./TreatsCard";
 const Treats = () => {
   const [fetchError, setFetchError] = useState(null);
   const [treats, setTreats] = useState(null);
+  // const [search, setSearch] = useState(null);
 
   useEffect(() => {
     const fetchTreats = async () => {
@@ -19,6 +20,8 @@ const Treats = () => {
   return (
     <div>
       <h1 className="treats-header">Treats</h1>
+      <div className="search"></div>
+
       {fetchError && <p>{fetchError}</p>}
       {treats && (
         <div className="treats">

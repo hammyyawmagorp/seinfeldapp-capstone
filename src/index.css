@@ -334,9 +334,6 @@ body {
 }
 .form-input-message {
   text-align: center;
-  margin-bottom: 2px;
-  margin-top: 50px;
-  margin-left: 200px;
   font-weight: 800;
   font-size: 25px;
 }
@@ -353,10 +350,9 @@ body {
   resize: none;
   cursor: pointer;
 }
-
-/* .footer-div {
-  background-color: #e30821;
-  width: 100%;
-  padding: 85px;
-  color: #e3082100;
-} */ ;
+.form-message-box:hover {
+  border: 2px solid rgba(231, 43, 33, 0.6);
+  background-color: rgba(231, 43, 33, 0.05);
+  color: #0526e3;
+  font-weight: 900px;
+}

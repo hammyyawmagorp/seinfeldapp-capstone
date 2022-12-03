@@ -11,7 +11,7 @@ const Intro = () => {
           you’ve come to the right place!<br></br>
           <br></br>
           Search for your favorite Seinfeldian treats. Learn more about them.
-          See where you can get some of the treats in New York City.<br></br>
+          See where you can get some of the treats in real life!<br></br>
           <br></br>
           You can also send us reccomendations/ideas for more items!
         </p>

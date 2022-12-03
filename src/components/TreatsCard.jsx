@@ -1,5 +1,4 @@
 import React from "react";
-import Treats from "./Treats";
 import { motion } from "framer-motion";
 import { useState } from "react";
 

@@ -4,7 +4,7 @@ const Trivia = () => {
   return (
     <div>
       <div>
-        <h1 className="locations-header">Trivia</h1>
+        <h1 className="locations-header"></h1>
       </div>
     </div>
   );

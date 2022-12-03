@@ -57,7 +57,7 @@ const Tips = () => {
         </div>
         <h5>All Fields Are Required</h5>
         <p className="form-input-labels">
-          First Name:
+          Name:
           <input
             className="form-input-fields"
             placeholder="Name"
@@ -103,7 +103,6 @@ const Tips = () => {
             required
           />
         </p>
-        <br></br>
         <button className="form-btn">Send</button>
       </form>
     </div>
