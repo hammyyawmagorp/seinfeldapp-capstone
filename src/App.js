@@ -3,7 +3,6 @@ import Header from "./components/Header";
 import Intro from "./components/Intro";
 import Treats from "./components/Treats";
 import Locations from "./components/Locations";
-import Trivia from "./components/Trivia";
 import Tips from "./components/Tips";
 import BackToTopBtn from "./components/BackToTopBtn";
 import { GoogleMap, useLoadScript } from "@react-google-maps/api";
@@ -12,7 +11,7 @@ import "./index.css";
 function App() {
   const treatsBtn = useRef(null);
   const locationsBtn = useRef(null);
-  const triviaBtn = useRef(null);
+  // const triviaBtn = useRef(null);
   const tipsBtn = useRef(null);
   const { isLoaded, loaderror } = useLoadScript({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
@@ -45,12 +44,12 @@ function App() {
           >
             Locations
           </button>
-          <button
+          {/* <button
             className="intro-btns"
             onClick={() => scrollToSection(triviaBtn)}
           >
             Trivia
-          </button>
+          </button> */}
           <button
             className="intro-btns"
             onClick={() => scrollToSection(tipsBtn)}
@@ -85,10 +84,10 @@ function App() {
           }}
         ></iframe>
       </div>
-
+      {/* 
       <div ref={triviaBtn}>
         <Trivia />
-      </div>
+      </div> */}
 
       <div ref={tipsBtn}>
         <Tips />
