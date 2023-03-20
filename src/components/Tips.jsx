@@ -1,52 +1,42 @@
 import React, { useState } from "react";
-// import axios from "axios";
+import supabaseFeedback from "../config/supabaseFeedbackClient";
 
 const Tips = () => {
-  const [mailerState, setMailerState] = useState({
-    name: "",
-    txtemail: "",
-    favchar: "",
-    message: "",
-  });
-  function handleStateChange(e) {
-    setMailerState((prevState) => ({
-      ...prevState,
-      [e.target.name]: e.target.value,
-    }));
-  }
-  const submitEmail = async (e) => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [character, setCharacter] = useState("");
+  const [message, setMessage] = useState("");
+  const [formError, setFormError] = useState(null);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log({ mailerState });
-    const response = await fetch("http://localhost:5050/send", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify({ mailerState }),
-    })
-      .then((res) => res.json())
-      .then(async (res) => {
-        const resData = await res;
-        console.log(resData);
-        if (resData.status === "success") {
-          alert("Message Sent");
-        } else if (resData.status === "fail") {
-          alert("Try Again. Message Not Sent");
-        }
-      })
-      .then(async (res) => {
-        setMailerState({
-          txtemail: "",
-          name: "",
-          favchar: "",
-          message: "",
-        });
-      });
+    setName("");
+    setEmail("");
+    setCharacter("");
+    setMessage("");
+
+    if (!name || !email || !character || !message) {
+      setFormError("Please fill in all fields correctly");
+      return;
+    }
+
+    const { data, error } = await supabaseFeedback
+      .from("seinfeldsitefeedback")
+      .insert([{ name, email, character, message }]);
+
+    if (error) {
+      console.log(error);
+      setFormError("Please fill in all fields correctly");
+    }
+    if (data) {
+      setFormError(null);
+    }
   };
+
   return (
     <div>
       <h1 className="tips-header">Tips & Comments?</h1>
-      <form className="form-box" onSubmit={submitEmail}>
+      <form className="form-box" onSubmit={handleSubmit}>
         <div>
           <p className="tips-para">
             Are there any other foods or locations you would like to see? Are
@@ -59,11 +49,12 @@ const Tips = () => {
         <p className="form-input-labels">
           Name:
           <input
+            type="text"
             className="form-input-fields"
             placeholder="Name"
-            onChange={handleStateChange}
+            onChange={(e) => setName(e.target.value)}
             name="name"
-            value={mailerState.name}
+            value={name}
             required
           />
         </p>
@@ -72,10 +63,10 @@ const Tips = () => {
           <input
             className="form-input-fields"
             placeholder="Email"
-            onChange={handleStateChange}
+            onChange={(e) => setEmail(e.target.value)}
             type="email"
-            name="txtemail"
-            value={mailerState.txtemail}
+            name="email"
+            value={email}
             required
           />
         </p>
@@ -85,9 +76,9 @@ const Tips = () => {
           <input
             className="form-input-fields"
             placeholder="Fav Character?"
-            onChange={handleStateChange}
-            name="favchar"
-            value={mailerState.favchar}
+            onChange={(e) => setCharacter(e.target.value)}
+            name="character"
+            value={character}
             required
           />
         </p>
@@ -97,13 +88,15 @@ const Tips = () => {
           <textarea
             className="form-message-box"
             placeholder="Message"
-            onChange={handleStateChange}
+            onChange={(e) => setMessage(e.target.value)}
             name="message"
-            value={mailerState.message}
+            value={message}
             required
           />
         </p>
         <button className="form-btn">Send</button>
+
+        {formError && <p className="error">{formError}</p>}
       </form>
     </div>
   );

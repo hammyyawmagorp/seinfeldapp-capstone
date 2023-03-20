@@ -13,7 +13,7 @@ const Intro = () => {
           Search for your favorite Seinfeldian treats. Learn more about them.
           See where you can get some of the treats in real life!<br></br>
           <br></br>
-          You can also send us reccomendations/ideas for more items!
+          You can also send us recommendations/ideas for more features.
         </p>
       </div>
     </div>

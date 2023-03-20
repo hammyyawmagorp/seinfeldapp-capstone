@@ -1,6 +1,5 @@
 import React from "react";
-import App from "../App";
-import axios from "axios";
+import supabaseCards from "../config/supabaseCardsClient";
 import { useEffect, useState } from "react";
 import TreatsCard from "./TreatsCard";
 
@@ -11,9 +10,28 @@ const Treats = () => {
 
   useEffect(() => {
     const fetchTreats = async () => {
-      const response = await axios.get(`http://localhost:5050/info`);
-      setTreats(response.data);
+      const { data, error } = await supabaseCards.from("seinfeldfoods").select(`
+        food_name,
+        episode,
+        episode_name,
+        characters,
+        location,
+        address,
+        image_url
+      `);
+
+      if (error) {
+        setFetchError("Could not get Treats");
+        setTreats(null);
+        console.log(error);
+      }
+      if (data) {
+        setTreats(data);
+        setFetchError(null);
+        console.log(data);
+      }
     };
+
     fetchTreats();
   }, []);
 
