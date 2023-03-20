@@ -1,11 +1,11 @@
-import { React, useRef, useEffect, useState } from "react";
+import { React, useRef } from "react";
 import Header from "./components/Header";
 import Intro from "./components/Intro";
 import Treats from "./components/Treats";
 import Locations from "./components/Locations";
 import Tips from "./components/Tips";
 import BackToTopBtn from "./components/BackToTopBtn";
-import { GoogleMap, useLoadScript } from "@react-google-maps/api";
+import { useLoadScript } from "@react-google-maps/api";
 import "./index.css";
 
 function App() {
@@ -73,6 +73,7 @@ function App() {
 
       <div>
         <iframe
+          title="seinfeldMap"
           src="https://snazzymaps.com/embed/436432"
           width="75%"
           height="800px"
